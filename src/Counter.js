@@ -4,7 +4,7 @@ function Counter(){
     // useState()는 함수형 업데이트
     // useState()의 ()안에 값은 default 값 셋팅
     // useState()는 사용하게 되면 배열로 반환
-    // 첫번째 원소는 number(현재 상태 값), 두번째 원소 setNumber(현재 상태 값을 변경하는 함수)
+    // 첫번째 원소는 number(상태 값), 두번째 원소 setNumber(현재 상태 값을 변경하는 함수)
     const [number,setNumber] = useState(0); // 배열 비구조화 
 
     const onIncrease = () => {

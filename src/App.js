@@ -1,10 +1,10 @@
 import React from 'react';
-import Counter from './Counter';
+import InputMultipleSample from './InputMultipleSample';
 
 function App() {
   return (
     
-    <Counter />
+    <InputMultipleSample/ >
     
   );
 }
