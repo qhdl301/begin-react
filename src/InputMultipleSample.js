@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 function InputSample(){
 
@@ -9,6 +9,9 @@ function InputSample(){
         nickname : '',
 
     });
+
+    // focus를 가직고 올수 있는 useRef 객체 선언
+    const inputFocus = useRef();
 
     console.log("상태 값 name: " + inputs.name);
     console.log("상태 값 nickname: " + inputs.nickname);
@@ -36,6 +39,8 @@ function InputSample(){
             name : '',
             nickname : '',
         });
+
+        inputFocus.current.focus();
     };
 
     return (
@@ -45,11 +50,14 @@ function InputSample(){
                 name="name" 
                 placeholder="이름" 
                 onChange={onChange} 
-                value={name}/>
+                value={name}
+                ref={inputFocus}
+            />
             <input name="nickname" 
                 placeholder="닉네임" 
                 onChange={onChange} 
-                value={nickname}/>
+                value={nickname}
+            />
             <button onClick={onReset}>초기화</button>
             <div>
                 <b>값 : </b>

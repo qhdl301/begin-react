@@ -1,10 +1,10 @@
 import React from 'react';
-import InputMultipleSample from './InputMultipleSample';
+import UserList from './UserList';
 
 function App() {
   return (
     
-    <InputMultipleSample/ >
+    <UserList />
     
   );
 }
